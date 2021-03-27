@@ -94,6 +94,7 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel4
             // 
@@ -117,6 +118,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel3
             // 
@@ -140,6 +142,7 @@
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel2
             // 
@@ -215,6 +218,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(273, 20);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // panel5
             // 
@@ -235,6 +239,7 @@
             this.dgv.Name = "dgv";
             this.dgv.Size = new System.Drawing.Size(407, 274);
             this.dgv.TabIndex = 1;
+            this.dgv.DoubleClick += new System.EventHandler(this.dgv_DoubleClick);
             // 
             // label3
             // 
@@ -367,6 +372,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Category_GUI";
             this.Text = "Category_GUI";
+            this.Load += new System.EventHandler(this.Category_GUI_Load);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

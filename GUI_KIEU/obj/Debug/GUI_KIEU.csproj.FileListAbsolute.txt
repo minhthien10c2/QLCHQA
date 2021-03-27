@@ -18,3 +18,7 @@ D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Account_GUI.resource
 D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Category_GUI.resources
 D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Bill_GUI.resources
 D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Login_GUI.resources
+D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.ChangePassword_GUI.resources
+D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.ReportSales_GUI.resources
+D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\RdlCompile.cache
+D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\RdlCompile.compiled

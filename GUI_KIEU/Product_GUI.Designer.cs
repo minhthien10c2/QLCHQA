@@ -194,10 +194,15 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.ForeColor = System.Drawing.Color.Gray;
             this.txtPrice.Location = new System.Drawing.Point(97, 128);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(153, 20);
             this.txtPrice.TabIndex = 4;
+            this.txtPrice.Text = "Chỉ nhập số";
+            this.txtPrice.Enter += new System.EventHandler(this.txtPrice_Enter);
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
             // 
             // label5
             // 
@@ -261,6 +266,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(273, 20);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // cbSearch
             // 
@@ -278,6 +284,7 @@
             this.dgv.Name = "dgv";
             this.dgv.Size = new System.Drawing.Size(434, 247);
             this.dgv.TabIndex = 1;
+            this.dgv.DoubleClick += new System.EventHandler(this.dgv_DoubleClick);
             // 
             // label7
             // 
@@ -333,6 +340,7 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel4
             // 
@@ -356,6 +364,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel3
             // 
@@ -379,6 +388,7 @@
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel6
             // 
@@ -412,6 +422,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Product_GUI";
             this.Text = "Product_GUI";
+            this.Load += new System.EventHandler(this.Product_GUI_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -12,7 +12,7 @@ namespace DAL_KIEU
     {
         public static SqlConnection Connect()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLCF;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLCHQA;Integrated Security=True");
             conn.Open();
             return conn;
         }
