@@ -3,3 +3,8 @@ D:\Univesity\SYNC\HAUCAC\QLCHQA\DTO_KIEU\bin\Debug\DTO_KIEU.pdb
 D:\Univesity\SYNC\HAUCAC\QLCHQA\DTO_KIEU\obj\Debug\DTO_KIEU.csprojResolveAssemblyReference.cache
 D:\Univesity\SYNC\HAUCAC\QLCHQA\DTO_KIEU\obj\Debug\DTO_KIEU.dll
 D:\Univesity\SYNC\HAUCAC\QLCHQA\DTO_KIEU\obj\Debug\DTO_KIEU.pdb
+C:\Users\Administrator\Documents\GitHub\QLCHQA\DTO_KIEU\bin\Debug\DTO_KIEU.dll
+C:\Users\Administrator\Documents\GitHub\QLCHQA\DTO_KIEU\bin\Debug\DTO_KIEU.pdb
+C:\Users\Administrator\Documents\GitHub\QLCHQA\DTO_KIEU\obj\Debug\DTO_KIEU.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\QLCHQA\DTO_KIEU\obj\Debug\DTO_KIEU.dll
+C:\Users\Administrator\Documents\GitHub\QLCHQA\DTO_KIEU\obj\Debug\DTO_KIEU.pdb

@@ -43,6 +43,7 @@
     <Compile Include="Bill_Detail_DTO.cs" />
     <Compile Include="Bill_DTO.cs" />
     <Compile Include="Category_DTO.cs" />
+    <Compile Include="Customer_DTO.cs" />
     <Compile Include="Product_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

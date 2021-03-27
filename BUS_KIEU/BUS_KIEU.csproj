@@ -43,6 +43,7 @@
     <Compile Include="Bill_BUS.cs" />
     <Compile Include="Bill_Detail_BUS.cs" />
     <Compile Include="Category_BUS.cs" />
+    <Compile Include="Customer_BUS.cs" />
     <Compile Include="Product_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

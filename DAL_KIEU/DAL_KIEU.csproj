@@ -43,6 +43,7 @@
     <Compile Include="Bill_DAL.cs" />
     <Compile Include="Bill_Detail_DAL.cs" />
     <Compile Include="Category_DAL.cs" />
+    <Compile Include="Customer_DAL.cs" />
     <Compile Include="DBConfig_DAL.cs" />
     <Compile Include="Product_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

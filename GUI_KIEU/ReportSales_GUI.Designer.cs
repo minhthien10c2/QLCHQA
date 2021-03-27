@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.QLCHQADataSet = new GUI_KIEU.QLCHQADataSet();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.QLCHQADataSet = new GUI_KIEU.QLCHQADataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataTable1TableAdapter = new GUI_KIEU.QLCHQADataSetTableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.QLCHQADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QLCHQADataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.QLCHQADataSet;
+            // 
+            // QLCHQADataSet
+            // 
+            this.QLCHQADataSet.DataSetName = "QLCHQADataSet";
+            this.QLCHQADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +60,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(608, 358);
             this.reportViewer1.TabIndex = 0;
             // 
-            // QLCHQADataSet
-            // 
-            this.QLCHQADataSet.DataSetName = "QLCHQADataSet";
-            this.QLCHQADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.QLCHQADataSet;
-            // 
             // DataTable1TableAdapter
             // 
             this.DataTable1TableAdapter.ClearBeforeFill = true;
@@ -71,10 +71,11 @@
             this.ClientSize = new System.Drawing.Size(608, 358);
             this.Controls.Add(this.reportViewer1);
             this.Name = "ReportSales_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ReportSales_GUI";
             this.Load += new System.EventHandler(this.ReportSales_GUI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.QLCHQADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QLCHQADataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

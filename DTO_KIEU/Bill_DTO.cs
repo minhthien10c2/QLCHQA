@@ -10,8 +10,8 @@ namespace DTO_KIEU
     {
         private String id;
         private double totalPrice;
-        private DateTime checkIn;
-        private String idTable;
+        private DateTime dateCreate;
+        private String idCustomer;
 
         public String Id
         {
@@ -19,10 +19,10 @@ namespace DTO_KIEU
             set { id = value; }
         }
 
-        public DateTime CheckIn
+        public DateTime DateCreate
         {
-            get { return checkIn; }
-            set { checkIn = value; }
+            get { return dateCreate; }
+            set { dateCreate = value; }
         }
 
         public double TotalPrice
@@ -31,10 +31,10 @@ namespace DTO_KIEU
             set { totalPrice = value; }
         }
 
-        public String IdTable
+        public String IdCustomer
         {
-            get { return idTable; }
-            set { idTable = value; }
+            get { return idCustomer; }
+            set { idCustomer = value; }
         }
 
         public Bill_DTO()
@@ -42,12 +42,12 @@ namespace DTO_KIEU
 
         }
 
-        public Bill_DTO(String id, DateTime checkin, double totalprice, String idtable)
+        public Bill_DTO(String id, DateTime datecreate, double totalprice, String idcustomer)
         {
             this.id = id;
-            this.checkIn = checkin;
+            this.dateCreate = datecreate;
             this.totalPrice = totalprice;
-            this.idTable = idtable;
+            this.idCustomer = idcustomer;
         }
     }
 }

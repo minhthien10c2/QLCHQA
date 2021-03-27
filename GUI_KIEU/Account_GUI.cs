@@ -87,7 +87,8 @@ namespace GUI_KIEU
             txtUserName.Clear();
             txtName.Clear();
             txtAddress.Clear();
-            txtPhone.Clear();
+            txtPhone.Text = "Chỉ nhập số";
+            txtPhone.ForeColor = Color.Gray;
             cbAuth.SelectedIndex = 0;
             cbGender.SelectedIndex = 0;
         }
@@ -98,6 +99,7 @@ namespace GUI_KIEU
             cbAuth.Text = dgv.CurrentRow.Cells[2].Value.ToString();
             txtName.Text = dgv.CurrentRow.Cells[3].Value.ToString();
             cbGender.Text = dgv.CurrentRow.Cells[4].Value.ToString();
+            txtPhone.ForeColor = Color.Black;
             txtPhone.Text = dgv.CurrentRow.Cells[5].Value.ToString();
             txtAddress.Text = dgv.CurrentRow.Cells[6].Value.ToString();
             id = dgv.CurrentRow.Cells[0].Value.ToString();

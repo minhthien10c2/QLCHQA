@@ -480,6 +480,7 @@
             this.ClientSize = new System.Drawing.Size(844, 545);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Account_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Account_GUI";
             this.Load += new System.EventHandler(this.Account_GUI_Load);
             this.panel2.ResumeLayout(false);

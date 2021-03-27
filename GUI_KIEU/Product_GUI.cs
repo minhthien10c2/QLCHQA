@@ -63,7 +63,8 @@ namespace GUI_KIEU
         private void Clear()
         {
             txtID.Clear();
-            txtPrice.Clear();
+            txtPrice.Text = "Chỉ nhập số";
+            txtPrice.ForeColor = Color.Gray;
             txtName.Clear();
             cbCategory.SelectedItem = 1;
         }
@@ -159,6 +160,7 @@ namespace GUI_KIEU
         {
             txtID.Text = dgv.CurrentRow.Cells[0].Value.ToString();
             txtName.Text = dgv.CurrentRow.Cells[1].Value.ToString();
+            txtPrice.ForeColor = Color.Black;
             txtPrice.Text = dgv.CurrentRow.Cells[2].Value.ToString();
             cbCategory.Text = dgv.CurrentRow.Cells[4].Value.ToString();
             id = dgv.CurrentRow.Cells[0].Value.ToString();
