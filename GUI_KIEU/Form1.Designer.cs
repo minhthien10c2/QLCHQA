@@ -60,83 +60,83 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(665, 437);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(460, 437);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(335, 222);
+            this.panel5.Location = new System.Drawing.Point(233, 221);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(194, 144);
+            this.panel5.Size = new System.Drawing.Size(194, 94);
             this.panel5.TabIndex = 4;
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(135, 222);
+            this.panel6.Location = new System.Drawing.Point(33, 221);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(194, 144);
+            this.panel6.Size = new System.Drawing.Size(194, 94);
             this.panel6.TabIndex = 5;
             // 
             // panel8
             // 
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(335, -78);
+            this.panel8.Location = new System.Drawing.Point(233, 21);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(194, 144);
+            this.panel8.Size = new System.Drawing.Size(194, 94);
             this.panel8.TabIndex = 10;
             // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(135, -78);
+            this.panel10.Location = new System.Drawing.Point(33, 21);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(194, 144);
+            this.panel10.Size = new System.Drawing.Size(194, 94);
             this.panel10.TabIndex = 11;
             // 
             // panel11
             // 
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(135, 72);
+            this.panel11.Location = new System.Drawing.Point(33, 121);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(194, 144);
+            this.panel11.Size = new System.Drawing.Size(194, 94);
             this.panel11.TabIndex = 12;
             // 
             // panel12
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(335, 72);
+            this.panel12.Location = new System.Drawing.Point(233, 121);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(194, 144);
+            this.panel12.Size = new System.Drawing.Size(194, 94);
             this.panel12.TabIndex = 13;
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(135, 372);
+            this.panel1.Location = new System.Drawing.Point(33, 321);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 144);
+            this.panel1.Size = new System.Drawing.Size(194, 94);
             this.panel1.TabIndex = 14;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(335, 372);
+            this.panel2.Location = new System.Drawing.Point(233, 321);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 144);
+            this.panel2.Size = new System.Drawing.Size(194, 94);
             this.panel2.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 437);
+            this.ClientSize = new System.Drawing.Size(460, 437);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
