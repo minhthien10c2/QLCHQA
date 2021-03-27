@@ -1,0 +1,7 @@
+D:\Univesity\SYNC\HAUCAC\QLCHQA\DAL_KIEU\bin\Debug\DAL_KIEU.dll
+D:\Univesity\SYNC\HAUCAC\QLCHQA\DAL_KIEU\bin\Debug\DAL_KIEU.pdb
+D:\Univesity\SYNC\HAUCAC\QLCHQA\DAL_KIEU\obj\Debug\DAL_KIEU.csprojResolveAssemblyReference.cache
+D:\Univesity\SYNC\HAUCAC\QLCHQA\DAL_KIEU\obj\Debug\DAL_KIEU.dll
+D:\Univesity\SYNC\HAUCAC\QLCHQA\DAL_KIEU\obj\Debug\DAL_KIEU.pdb
+D:\Univesity\SYNC\HAUCAC\QLCHQA\DAL_KIEU\bin\Debug\DTO_KIEU.dll
+D:\Univesity\SYNC\HAUCAC\QLCHQA\DAL_KIEU\bin\Debug\DTO_KIEU.pdb
