@@ -283,5 +283,10 @@ namespace GUI_KIEU
             dgv.DataSource = DV;
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

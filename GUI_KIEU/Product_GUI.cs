@@ -206,5 +206,10 @@ namespace GUI_KIEU
             excel.Export(dt, "san pham", "DANH SÁCH SẢN PHẨM");
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

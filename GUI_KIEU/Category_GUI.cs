@@ -156,5 +156,10 @@ namespace GUI_KIEU
             DV.RowFilter = "" + cbSearch.SelectedValue + " like '%" + txtSearch.Text + "%'";
             dgv.DataSource = DV;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

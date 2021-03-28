@@ -258,5 +258,10 @@ namespace GUI_KIEU
             DataTable dt = (DataTable)(dgv.DataSource);
             excel.Export(dt, "san pham", "DANH SÁCH TÀI KHOẢN");
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
