@@ -282,5 +282,6 @@ namespace GUI_KIEU
             DV.RowFilter = "" + cbSearch.SelectedValue + " like '%" + txtSearch.Text + "%'";
             dgv.DataSource = DV;
         }
+
     }
 }

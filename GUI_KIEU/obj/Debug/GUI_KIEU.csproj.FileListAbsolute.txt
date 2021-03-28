@@ -32,7 +32,6 @@ C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Chang
 C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Login_GUI.resources
 C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Product_GUI.resources
 C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Properties.Resources.resources
-C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.ReportSales_GUI.resources
 C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\RdlCompile.cache
 C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\RdlCompile.compiled
@@ -48,3 +47,4 @@ C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Custo
 C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Main.resources
 D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Customer_GUI.resources
 D:\Univesity\SYNC\HAUCAC\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Main.resources
+C:\Users\Administrator\Documents\GitHub\QLCHQA\GUI_KIEU\obj\Debug\GUI_KIEU.Report_GUI.resources

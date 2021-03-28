@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace GUI_KIEU
 {
-    public partial class ReportSales_GUI : Form
+    public partial class Report_GUI : Form
     {
-        public ReportSales_GUI()
+        public Report_GUI()
         {
             InitializeComponent();
         }
 
-        private void ReportSales_GUI_Load(object sender, EventArgs e)
+        private void Report_GUI_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'QLCHQADataSet.DataTable1' table. You can move, or remove it, as needed.
             this.DataTable1TableAdapter.Fill(this.QLCHQADataSet.DataTable1);

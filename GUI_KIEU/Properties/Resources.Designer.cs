@@ -63,9 +63,9 @@ namespace GUI_KIEU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap account2 {
+        internal static System.Drawing.Bitmap account__1_ {
             get {
-                object obj = ResourceManager.GetObject("account2", resourceCulture);
+                object obj = ResourceManager.GetObject("account (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace GUI_KIEU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bill1 {
+        internal static System.Drawing.Bitmap bill__1_ {
             get {
-                object obj = ResourceManager.GetObject("bill1", resourceCulture);
+                object obj = ResourceManager.GetObject("bill (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace GUI_KIEU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bill11 {
+        internal static System.Drawing.Bitmap business_report__1_ {
             get {
-                object obj = ResourceManager.GetObject("bill11", resourceCulture);
+                object obj = ResourceManager.GetObject("business-report (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace GUI_KIEU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Category {
+        internal static System.Drawing.Bitmap dress__1_ {
             get {
-                object obj = ResourceManager.GetObject("Category", resourceCulture);
+                object obj = ResourceManager.GetObject("dress (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace GUI_KIEU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap changePass {
+        internal static System.Drawing.Bitmap dress__2_ {
             get {
-                object obj = ResourceManager.GetObject("changePass", resourceCulture);
+                object obj = ResourceManager.GetObject("dress (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace GUI_KIEU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap customer {
+        internal static System.Drawing.Bitmap dress__3_ {
             get {
-                object obj = ResourceManager.GetObject("customer", resourceCulture);
+                object obj = ResourceManager.GetObject("dress (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace GUI_KIEU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fdg {
+        internal static System.Drawing.Bitmap list__1_ {
             get {
-                object obj = ResourceManager.GetObject("fdg", resourceCulture);
+                object obj = ResourceManager.GetObject("list (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace GUI_KIEU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap product {
+        internal static System.Drawing.Bitmap password__1_ {
             get {
-                object obj = ResourceManager.GetObject("product", resourceCulture);
+                object obj = ResourceManager.GetObject("password (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace GUI_KIEU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap report {
+        internal static System.Drawing.Bitmap target__1_ {
             get {
-                object obj = ResourceManager.GetObject("report", resourceCulture);
+                object obj = ResourceManager.GetObject("target (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

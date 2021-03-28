@@ -57,6 +57,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -82,7 +83,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(730, 345);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(789, 445);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -93,7 +94,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(724, 40);
+            this.label1.Size = new System.Drawing.Size(783, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ SẢN PHẨM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -110,7 +111,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(724, 299);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(783, 399);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -120,12 +121,12 @@
             this.tableLayoutPanel3.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(449, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(508, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 195F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(272, 293);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(272, 393);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel1
@@ -152,7 +153,7 @@
             this.label7.ForeColor = System.Drawing.Color.DarkCyan;
             this.label7.Location = new System.Drawing.Point(100, 44);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 16);
+            this.label7.Size = new System.Drawing.Size(72, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Thông tin";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -247,11 +248,13 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.82609F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.17391F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(266, 92);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(266, 192);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnExcel);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.btnEdit);
@@ -260,13 +263,12 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(260, 36);
+            this.panel2.Size = new System.Drawing.Size(260, 80);
             this.panel2.TabIndex = 2;
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -281,7 +283,6 @@
             // 
             // panel4
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(72, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(19, 36);
@@ -290,7 +291,6 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,7 +305,6 @@
             // 
             // panel3
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(166, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(19, 36);
@@ -314,7 +313,6 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -331,7 +329,7 @@
             // 
             this.panel6.Controls.Add(this.btnExit);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(3, 57);
+            this.panel6.Location = new System.Drawing.Point(3, 157);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(260, 32);
             this.panel6.TabIndex = 3;
@@ -363,7 +361,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(440, 293);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(499, 393);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // panel5
@@ -410,15 +408,30 @@
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(3, 43);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(434, 247);
+            this.dgv.Size = new System.Drawing.Size(493, 347);
             this.dgv.TabIndex = 1;
             this.dgv.DoubleClick += new System.EventHandler(this.dgv_DoubleClick);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnExcel.FlatAppearance.BorderSize = 0;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExcel.Location = new System.Drawing.Point(72, 41);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(113, 36);
+            this.btnExcel.TabIndex = 5;
+            this.btnExcel.Text = "Xuất Excel";
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // Product_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 345);
+            this.ClientSize = new System.Drawing.Size(789, 445);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Product_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -472,5 +485,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

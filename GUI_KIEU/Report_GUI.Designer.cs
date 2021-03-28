@@ -1,6 +1,6 @@
 ﻿namespace GUI_KIEU
 {
-    partial class ReportSales_GUI
+    partial class Report_GUI
     {
         /// <summary>
         /// Required designer variable.
@@ -29,53 +29,53 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.QLCHQADataSet = new GUI_KIEU.QLCHQADataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.QLCHQADataSet = new GUI_KIEU.QLCHQADataSet();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataTable1TableAdapter = new GUI_KIEU.QLCHQADataSetTableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QLCHQADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataTable1BindingSource
+            // reportViewer1
             // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.QLCHQADataSet;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.DataTable1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUI_KIEU.Report.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(629, 424);
+            this.reportViewer1.TabIndex = 0;
             // 
             // QLCHQADataSet
             // 
             this.QLCHQADataSet.DataSetName = "QLCHQADataSet";
             this.QLCHQADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // DataTable1BindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUI_KIEU.Report_Sales.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(608, 358);
-            this.reportViewer1.TabIndex = 0;
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.QLCHQADataSet;
             // 
             // DataTable1TableAdapter
             // 
             this.DataTable1TableAdapter.ClearBeforeFill = true;
             // 
-            // ReportSales_GUI
+            // Report_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 358);
+            this.ClientSize = new System.Drawing.Size(629, 424);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "ReportSales_GUI";
+            this.Name = "Report_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ReportSales_GUI";
-            this.Load += new System.EventHandler(this.ReportSales_GUI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            this.Text = "Report_GUI";
+            this.Load += new System.EventHandler(this.Report_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.QLCHQADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

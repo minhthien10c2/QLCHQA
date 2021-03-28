@@ -251,5 +251,12 @@ namespace GUI_KIEU
                 txtPhone.ForeColor = Color.Gray;
             }
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            ExportExcel excel = new ExportExcel();
+            DataTable dt = (DataTable)(dgv.DataSource);
+            excel.Export(dt, "san pham", "DANH SÁCH TÀI KHOẢN");
+        }
     }
 }

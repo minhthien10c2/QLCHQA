@@ -198,5 +198,13 @@ namespace GUI_KIEU
                 e.Handled = true;
             }
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            ExportExcel excel = new ExportExcel();
+            DataTable dt = (DataTable)(dgv.DataSource);
+            excel.Export(dt, "san pham", "DANH SÁCH SẢN PHẨM");
+        }
+
     }
 }

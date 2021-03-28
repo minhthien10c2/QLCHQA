@@ -46,10 +46,6 @@ namespace GUI_KIEU {
         
         private global::System.Data.DataRelation relationFK__product__id_cate__164452B1;
         
-        private global::System.Data.DataRelation relationFK__bill_deta__id_bi__1BFD2C071;
-        
-        private global::System.Data.DataRelation relationFK__bill_deta__id_pr__1CF150401;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -354,8 +350,6 @@ namespace GUI_KIEU {
             this.relationFK__bill_deta__id_bi__1BFD2C07 = this.Relations["FK__bill_deta__id_bi__1BFD2C07"];
             this.relationFK__bill_deta__id_pr__1CF15040 = this.Relations["FK__bill_deta__id_pr__1CF15040"];
             this.relationFK__product__id_cate__164452B1 = this.Relations["FK__product__id_cate__164452B1"];
-            this.relationFK__bill_deta__id_bi__1BFD2C071 = this.Relations["FK__bill_deta__id_bi__1BFD2C071"];
-            this.relationFK__bill_deta__id_pr__1CF150401 = this.Relations["FK__bill_deta__id_pr__1CF150401"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -396,14 +390,6 @@ namespace GUI_KIEU {
                         this.tablecategory.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableproduct.id_categoryColumn}, false);
             this.Relations.Add(this.relationFK__product__id_cate__164452B1);
-            this.relationFK__bill_deta__id_bi__1BFD2C071 = new global::System.Data.DataRelation("FK__bill_deta__id_bi__1BFD2C071", new global::System.Data.DataColumn[] {
-                        this.tablebill.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDataTable1.id_billColumn}, false);
-            this.Relations.Add(this.relationFK__bill_deta__id_bi__1BFD2C071);
-            this.relationFK__bill_deta__id_pr__1CF150401 = new global::System.Data.DataRelation("FK__bill_deta__id_pr__1CF150401", new global::System.Data.DataColumn[] {
-                        this.tableproduct.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDataTable1.id_productColumn}, false);
-            this.Relations.Add(this.relationFK__bill_deta__id_pr__1CF150401);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2396,25 +2382,13 @@ namespace GUI_KIEU {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columndate_create;
+            private global::System.Data.DataColumn columnname;
+            
+            private global::System.Data.DataColumn columnExpr1;
             
             private global::System.Data.DataColumn columnquantity;
             
-            private global::System.Data.DataColumn columnname;
-            
-            private global::System.Data.DataColumn columnid;
-            
-            private global::System.Data.DataColumn columntotal_price;
-            
-            private global::System.Data.DataColumn columnid_customer;
-            
-            private global::System.Data.DataColumn columnid_bill;
-            
-            private global::System.Data.DataColumn columnid_product;
-            
-            private global::System.Data.DataColumn columncategory_name;
-            
-            private global::System.Data.DataColumn columncustomer_name;
+            private global::System.Data.DataColumn columndate_create;
             
             private global::System.Data.DataColumn columnprice;
             
@@ -2453,9 +2427,17 @@ namespace GUI_KIEU {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn date_createColumn {
+            public global::System.Data.DataColumn nameColumn {
                 get {
-                    return this.columndate_create;
+                    return this.columnname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr1Column {
+                get {
+                    return this.columnExpr1;
                 }
             }
             
@@ -2469,65 +2451,9 @@ namespace GUI_KIEU {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
+            public global::System.Data.DataColumn date_createColumn {
                 get {
-                    return this.columnname;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
-                get {
-                    return this.columnid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn total_priceColumn {
-                get {
-                    return this.columntotal_price;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_customerColumn {
-                get {
-                    return this.columnid_customer;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_billColumn {
-                get {
-                    return this.columnid_bill;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_productColumn {
-                get {
-                    return this.columnid_product;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn category_nameColumn {
-                get {
-                    return this.columncategory_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn customer_nameColumn {
-                get {
-                    return this.columncustomer_name;
+                    return this.columndate_create;
                 }
             }
             
@@ -2576,36 +2502,17 @@ namespace GUI_KIEU {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(System.DateTime date_create, int quantity, string name, string id, double total_price, string id_customer, billRow parentbillRowByFK__bill_deta__id_bi__1BFD2C071, productRow parentproductRowByFK__bill_deta__id_pr__1CF150401, string category_name, string customer_name, double price) {
+            public DataTable1Row AddDataTable1Row(string name, string Expr1, int quantity, System.DateTime date_create, double price) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        date_create,
-                        quantity,
                         name,
-                        id,
-                        total_price,
-                        id_customer,
-                        null,
-                        null,
-                        category_name,
-                        customer_name,
+                        Expr1,
+                        quantity,
+                        date_create,
                         price};
-                if ((parentbillRowByFK__bill_deta__id_bi__1BFD2C071 != null)) {
-                    columnValuesArray[6] = parentbillRowByFK__bill_deta__id_bi__1BFD2C071[0];
-                }
-                if ((parentproductRowByFK__bill_deta__id_pr__1CF150401 != null)) {
-                    columnValuesArray[7] = parentproductRowByFK__bill_deta__id_pr__1CF150401[0];
-                }
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row FindByid(string id) {
-                return ((DataTable1Row)(this.Rows.Find(new object[] {
-                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2625,64 +2532,32 @@ namespace GUI_KIEU {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columndate_create = base.Columns["date_create"];
-                this.columnquantity = base.Columns["quantity"];
                 this.columnname = base.Columns["name"];
-                this.columnid = base.Columns["id"];
-                this.columntotal_price = base.Columns["total_price"];
-                this.columnid_customer = base.Columns["id_customer"];
-                this.columnid_bill = base.Columns["id_bill"];
-                this.columnid_product = base.Columns["id_product"];
-                this.columncategory_name = base.Columns["category_name"];
-                this.columncustomer_name = base.Columns["customer_name"];
+                this.columnExpr1 = base.Columns["Expr1"];
+                this.columnquantity = base.Columns["quantity"];
+                this.columndate_create = base.Columns["date_create"];
                 this.columnprice = base.Columns["price"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columndate_create = new global::System.Data.DataColumn("date_create", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndate_create);
-                this.columnquantity = new global::System.Data.DataColumn("quantity", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnquantity);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
-                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columntotal_price = new global::System.Data.DataColumn("total_price", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotal_price);
-                this.columnid_customer = new global::System.Data.DataColumn("id_customer", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_customer);
-                this.columnid_bill = new global::System.Data.DataColumn("id_bill", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_bill);
-                this.columnid_product = new global::System.Data.DataColumn("id_product", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_product);
-                this.columncategory_name = new global::System.Data.DataColumn("category_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncategory_name);
-                this.columncustomer_name = new global::System.Data.DataColumn("customer_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncustomer_name);
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
+                this.columnquantity = new global::System.Data.DataColumn("quantity", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantity);
+                this.columndate_create = new global::System.Data.DataColumn("date_create", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_create);
                 this.columnprice = new global::System.Data.DataColumn("price", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprice);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columndate_create.AllowDBNull = false;
-                this.columnquantity.AllowDBNull = false;
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 100;
-                this.columnid.AllowDBNull = false;
-                this.columnid.Unique = true;
-                this.columnid.MaxLength = 10;
-                this.columntotal_price.AllowDBNull = false;
-                this.columnid_customer.AllowDBNull = false;
-                this.columnid_customer.MaxLength = 10;
-                this.columnid_bill.AllowDBNull = false;
-                this.columnid_bill.MaxLength = 10;
-                this.columnid_product.AllowDBNull = false;
-                this.columnid_product.MaxLength = 10;
-                this.columncategory_name.AllowDBNull = false;
-                this.columncategory_name.MaxLength = 100;
-                this.columncustomer_name.AllowDBNull = false;
-                this.columncustomer_name.MaxLength = 100;
+                this.columnExpr1.AllowDBNull = false;
+                this.columnExpr1.MaxLength = 100;
+                this.columnquantity.AllowDBNull = false;
+                this.columndate_create.AllowDBNull = false;
                 this.columnprice.AllowDBNull = false;
             }
             
@@ -2981,17 +2856,6 @@ namespace GUI_KIEU {
                     return ((bill_detailRow[])(base.GetChildRows(this.Table.ChildRelations["FK__bill_deta__id_bi__1BFD2C07"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row[] GetDataTable1Rows() {
-                if ((this.Table.ChildRelations["FK__bill_deta__id_bi__1BFD2C071"] == null)) {
-                    return new DataTable1Row[0];
-                }
-                else {
-                    return ((DataTable1Row[])(base.GetChildRows(this.Table.ChildRelations["FK__bill_deta__id_bi__1BFD2C071"])));
-                }
-            }
         }
         
         /// <summary>
@@ -3272,17 +3136,6 @@ namespace GUI_KIEU {
                     return ((bill_detailRow[])(base.GetChildRows(this.Table.ChildRelations["FK__bill_deta__id_pr__1CF15040"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row[] GetDataTable1Rows() {
-                if ((this.Table.ChildRelations["FK__bill_deta__id_pr__1CF150401"] == null)) {
-                    return new DataTable1Row[0];
-                }
-                else {
-                    return ((DataTable1Row[])(base.GetChildRows(this.Table.ChildRelations["FK__bill_deta__id_pr__1CF150401"])));
-                }
-            }
         }
         
         /// <summary>
@@ -3301,12 +3154,23 @@ namespace GUI_KIEU {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime date_create {
+            public string name {
                 get {
-                    return ((global::System.DateTime)(this[this.tableDataTable1.date_createColumn]));
+                    return ((string)(this[this.tableDataTable1.nameColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.date_createColumn] = value;
+                    this[this.tableDataTable1.nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Expr1 {
+                get {
+                    return ((string)(this[this.tableDataTable1.Expr1Column]));
+                }
+                set {
+                    this[this.tableDataTable1.Expr1Column] = value;
                 }
             }
             
@@ -3323,89 +3187,12 @@ namespace GUI_KIEU {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string name {
+            public System.DateTime date_create {
                 get {
-                    return ((string)(this[this.tableDataTable1.nameColumn]));
+                    return ((global::System.DateTime)(this[this.tableDataTable1.date_createColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string id {
-                get {
-                    return ((string)(this[this.tableDataTable1.idColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double total_price {
-                get {
-                    return ((double)(this[this.tableDataTable1.total_priceColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.total_priceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string id_customer {
-                get {
-                    return ((string)(this[this.tableDataTable1.id_customerColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.id_customerColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string id_bill {
-                get {
-                    return ((string)(this[this.tableDataTable1.id_billColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.id_billColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string id_product {
-                get {
-                    return ((string)(this[this.tableDataTable1.id_productColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.id_productColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string category_name {
-                get {
-                    return ((string)(this[this.tableDataTable1.category_nameColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.category_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string customer_name {
-                get {
-                    return ((string)(this[this.tableDataTable1.customer_nameColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.customer_nameColumn] = value;
+                    this[this.tableDataTable1.date_createColumn] = value;
                 }
             }
             
@@ -3417,28 +3204,6 @@ namespace GUI_KIEU {
                 }
                 set {
                     this[this.tableDataTable1.priceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public billRow billRow {
-                get {
-                    return ((billRow)(this.GetParentRow(this.Table.ParentRelations["FK__bill_deta__id_bi__1BFD2C071"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__bill_deta__id_bi__1BFD2C071"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public productRow productRow {
-                get {
-                    return ((productRow)(this.GetParentRow(this.Table.ParentRelations["FK__bill_deta__id_pr__1CF150401"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__bill_deta__id_pr__1CF150401"]);
                 }
             }
         }
@@ -6104,16 +5869,10 @@ SELECT id, name, price, id_category FROM product WHERE (id = @id)";
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("date_create", "date_create");
-            tableMapping.ColumnMappings.Add("quantity", "quantity");
             tableMapping.ColumnMappings.Add("name", "name");
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("total_price", "total_price");
-            tableMapping.ColumnMappings.Add("id_customer", "id_customer");
-            tableMapping.ColumnMappings.Add("id_bill", "id_bill");
-            tableMapping.ColumnMappings.Add("id_product", "id_product");
-            tableMapping.ColumnMappings.Add("category_name", "category_name");
-            tableMapping.ColumnMappings.Add("customer_name", "customer_name");
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
+            tableMapping.ColumnMappings.Add("quantity", "quantity");
+            tableMapping.ColumnMappings.Add("date_create", "date_create");
             tableMapping.ColumnMappings.Add("price", "price");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -6131,12 +5890,11 @@ SELECT id, name, price, id_category FROM product WHERE (id = @id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        bill.id, bill.date_create, bill.total_price, bill.id_customer, bill_detail.id_bill, bill_detail.id_product, bill_detail.quantity, product.name, category.name AS category_name, customer.name AS customer_name, product.price
-FROM            bill INNER JOIN
-                         bill_detail ON bill.id = bill_detail.id_bill INNER JOIN
+            this._commandCollection[0].CommandText = @"SELECT        product.name, category.name AS Expr1, bill_detail.quantity, bill.date_create, product.price
+FROM            bill_detail INNER JOIN
                          product ON bill_detail.id_product = product.id INNER JOIN
                          category ON product.id_category = category.id INNER JOIN
-                         customer ON bill.id_customer = customer.id";
+                         bill ON bill_detail.id_bill = bill.id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -24,51 +24,45 @@ namespace GUI_KIEU
         Product_GUI product_gui;
         Category_GUI category_gui;
         Account_GUI account_gui;
-        ReportSales_GUI report_sales_gui;
+        Report_GUI report_sales_gui;
         ChangePassword_GUI change_pass_gui;
         Customer_GUI customer_gui;
 
-        private void pnBill_Click(object sender, EventArgs e)
-        {
-            bill_gui = new Bill_GUI();
-            bill_gui.ShowDialog();
-        }
-
-        private void pnChangePass_Click(object sender, EventArgs e)
+        private void btnChangePass_Click(object sender, EventArgs e)
         {
             change_pass_gui = new ChangePassword_GUI();
             change_pass_gui.account = account;
             change_pass_gui.ShowDialog();
         }
 
-        private void pnCategory_Click(object sender, EventArgs e)
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            customer_gui = new Customer_GUI();
+            customer_gui.ShowDialog();
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
         {
             category_gui = new Category_GUI();
             category_gui.ShowDialog();
         }
 
-        private void pnProduct_Click(object sender, EventArgs e)
+        private void btnProduct_Click(object sender, EventArgs e)
         {
             product_gui = new Product_GUI();
             product_gui.ShowDialog();
         }
 
-        private void pnReport_Click(object sender, EventArgs e)
+        private void btnReport_Click(object sender, EventArgs e)
         {
-            report_sales_gui = new ReportSales_GUI();
+            report_sales_gui = new Report_GUI();
             report_sales_gui.ShowDialog();
         }
 
-        private void pnAccount_Click(object sender, EventArgs e)
+        private void btnAccount_Click(object sender, EventArgs e)
         {
             account_gui = new Account_GUI();
             account_gui.ShowDialog();
-        }
-
-        private void pnCustomer_Click_1(object sender, EventArgs e)
-        {
-            customer_gui = new Customer_GUI();
-            customer_gui.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -86,6 +80,15 @@ namespace GUI_KIEU
         {
             Application.Exit();
         }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            bill_gui = new Bill_GUI();
+            bill_gui.ShowDialog();
+        }
+
+        
+
 
     }
 }

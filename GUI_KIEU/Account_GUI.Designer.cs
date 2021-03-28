@@ -158,7 +158,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(362, 33);
+            this.panel2.Size = new System.Drawing.Size(362, 85);
             this.panel2.TabIndex = 2;
             // 
             // tableLayoutPanel5
@@ -192,7 +192,7 @@
             this.label7.ForeColor = System.Drawing.Color.DarkCyan;
             this.label7.Location = new System.Drawing.Point(151, 45);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 16);
+            this.label7.Size = new System.Drawing.Size(72, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Thông tin";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

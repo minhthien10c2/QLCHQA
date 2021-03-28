@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -77,6 +80,7 @@
     <Compile Include="Customer_GUI.Designer.cs">
       <DependentUpon>Customer_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExportExcel.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,16 +101,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="QLCHQADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLCHQADataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ReportSales_GUI.cs">
+    <Compile Include="Report_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportSales_GUI.Designer.cs">
-      <DependentUpon>ReportSales_GUI.cs</DependentUpon>
+    <Compile Include="Report_GUI.Designer.cs">
+      <DependentUpon>Report_GUI.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Account_GUI.resx">
       <DependentUpon>Account_GUI.cs</DependentUpon>
@@ -134,18 +143,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="ReportSales_GUI.resx">
-      <DependentUpon>ReportSales_GUI.cs</DependentUpon>
+    <EmbeddedResource Include="Report.rdlc" />
+    <EmbeddedResource Include="Report_GUI.resx">
+      <DependentUpon>Report_GUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report_Sales.rdlc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,17 +159,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLCHQADataSet.xsc">
-      <DependentUpon>QLCHQADataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLCHQADataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLCHQADataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLCHQADataSet.xss">
-      <DependentUpon>QLCHQADataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -181,31 +174,48 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Category.png" />
+    <None Include="QLCHQADataSet.xsc">
+      <DependentUpon>QLCHQADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLCHQADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLCHQADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLCHQADataSet.xss">
+      <DependentUpon>QLCHQADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\dress %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fdg.png" />
+    <None Include="Resources\dress %281%291.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\product.png" />
+    <None Include="Resources\dress %281%292.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bill1.png" />
+    <None Include="Resources\dress %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bill11.png" />
+    <None Include="Resources\dress %283%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\changePass.png" />
+    <None Include="Resources\account %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\report.png" />
+    <None Include="Resources\bill %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\account2.png" />
+    <None Include="Resources\business-report %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\customer.png" />
+    <None Include="Resources\list %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\target %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

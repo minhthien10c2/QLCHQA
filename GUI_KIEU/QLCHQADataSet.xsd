@@ -362,31 +362,24 @@ SELECT id, name, price, id_category FROM product WHERE (id = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QLCHQAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QLCHQAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        bill.id, bill.date_create, bill.total_price, bill.id_customer, bill_detail.id_bill, bill_detail.id_product, bill_detail.quantity, product.name, category.name AS category_name, customer.name AS customer_name, product.price
-FROM            bill INNER JOIN
-                         bill_detail ON bill.id = bill_detail.id_bill INNER JOIN
+                    <CommandText>SELECT        product.name, category.name AS Expr1, bill_detail.quantity, bill.date_create, product.price
+FROM            bill_detail INNER JOIN
                          product ON bill_detail.id_product = product.id INNER JOIN
                          category ON product.id_category = category.id INNER JOIN
-                         customer ON bill.id_customer = customer.id</CommandText>
+                         bill ON bill_detail.id_bill = bill.id</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="date_create" DataSetColumn="date_create" />
-              <Mapping SourceColumn="quantity" DataSetColumn="quantity" />
               <Mapping SourceColumn="name" DataSetColumn="name" />
-              <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="total_price" DataSetColumn="total_price" />
-              <Mapping SourceColumn="id_customer" DataSetColumn="id_customer" />
-              <Mapping SourceColumn="id_bill" DataSetColumn="id_bill" />
-              <Mapping SourceColumn="id_product" DataSetColumn="id_product" />
-              <Mapping SourceColumn="category_name" DataSetColumn="category_name" />
-              <Mapping SourceColumn="customer_name" DataSetColumn="customer_name" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="quantity" DataSetColumn="quantity" />
+              <Mapping SourceColumn="date_create" DataSetColumn="date_create" />
               <Mapping SourceColumn="price" DataSetColumn="price" />
             </Mappings>
             <Sources />
@@ -399,7 +392,7 @@ FROM            bill INNER JOIN
   <xs:element name="QLCHQADataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLCHQADataSet" msprop:Generator_UserDSName="QLCHQADataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="account" msprop:Generator_TableClassName="accountDataTable" msprop:Generator_TableVarName="tableaccount" msprop:Generator_TablePropName="account" msprop:Generator_RowDeletingName="accountRowDeleting" msprop:Generator_RowChangingName="accountRowChanging" msprop:Generator_RowEvHandlerName="accountRowChangeEventHandler" msprop:Generator_RowDeletedName="accountRowDeleted" msprop:Generator_UserTableName="account" msprop:Generator_RowChangedName="accountRowChanged" msprop:Generator_RowEvArgName="accountRowChangeEvent" msprop:Generator_RowClassName="accountRow">
+        <xs:element name="account" msprop:Generator_TableClassName="accountDataTable" msprop:Generator_TableVarName="tableaccount" msprop:Generator_RowChangedName="accountRowChanged" msprop:Generator_TablePropName="account" msprop:Generator_RowDeletingName="accountRowDeleting" msprop:Generator_RowChangingName="accountRowChanging" msprop:Generator_RowEvHandlerName="accountRowChangeEventHandler" msprop:Generator_RowDeletedName="accountRowDeleted" msprop:Generator_RowClassName="accountRow" msprop:Generator_UserTableName="account" msprop:Generator_RowEvArgName="accountRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="user_name" msprop:Generator_ColumnVarNameInTable="columnuser_name" msprop:Generator_ColumnPropNameInRow="user_name" msprop:Generator_ColumnPropNameInTable="user_nameColumn" msprop:Generator_UserColumnName="user_name">
@@ -448,7 +441,7 @@ FROM            bill INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="bill" msprop:Generator_TableClassName="billDataTable" msprop:Generator_TableVarName="tablebill" msprop:Generator_TablePropName="bill" msprop:Generator_RowDeletingName="billRowDeleting" msprop:Generator_RowChangingName="billRowChanging" msprop:Generator_RowEvHandlerName="billRowChangeEventHandler" msprop:Generator_RowDeletedName="billRowDeleted" msprop:Generator_UserTableName="bill" msprop:Generator_RowChangedName="billRowChanged" msprop:Generator_RowEvArgName="billRowChangeEvent" msprop:Generator_RowClassName="billRow">
+        <xs:element name="bill" msprop:Generator_TableClassName="billDataTable" msprop:Generator_TableVarName="tablebill" msprop:Generator_RowChangedName="billRowChanged" msprop:Generator_TablePropName="bill" msprop:Generator_RowDeletingName="billRowDeleting" msprop:Generator_RowChangingName="billRowChanging" msprop:Generator_RowEvHandlerName="billRowChangeEventHandler" msprop:Generator_RowDeletedName="billRowDeleted" msprop:Generator_RowClassName="billRow" msprop:Generator_UserTableName="bill" msprop:Generator_RowEvArgName="billRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id">
@@ -470,7 +463,7 @@ FROM            bill INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="bill_detail" msprop:Generator_TableClassName="bill_detailDataTable" msprop:Generator_TableVarName="tablebill_detail" msprop:Generator_TablePropName="bill_detail" msprop:Generator_RowDeletingName="bill_detailRowDeleting" msprop:Generator_RowChangingName="bill_detailRowChanging" msprop:Generator_RowEvHandlerName="bill_detailRowChangeEventHandler" msprop:Generator_RowDeletedName="bill_detailRowDeleted" msprop:Generator_UserTableName="bill_detail" msprop:Generator_RowChangedName="bill_detailRowChanged" msprop:Generator_RowEvArgName="bill_detailRowChangeEvent" msprop:Generator_RowClassName="bill_detailRow">
+        <xs:element name="bill_detail" msprop:Generator_TableClassName="bill_detailDataTable" msprop:Generator_TableVarName="tablebill_detail" msprop:Generator_RowChangedName="bill_detailRowChanged" msprop:Generator_TablePropName="bill_detail" msprop:Generator_RowDeletingName="bill_detailRowDeleting" msprop:Generator_RowChangingName="bill_detailRowChanging" msprop:Generator_RowEvHandlerName="bill_detailRowChangeEventHandler" msprop:Generator_RowDeletedName="bill_detailRowDeleted" msprop:Generator_RowClassName="bill_detailRow" msprop:Generator_UserTableName="bill_detail" msprop:Generator_RowEvArgName="bill_detailRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_bill" msprop:Generator_ColumnVarNameInTable="columnid_bill" msprop:Generator_ColumnPropNameInRow="id_bill" msprop:Generator_ColumnPropNameInTable="id_billColumn" msprop:Generator_UserColumnName="id_bill">
@@ -491,7 +484,7 @@ FROM            bill INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="category" msprop:Generator_TableClassName="categoryDataTable" msprop:Generator_TableVarName="tablecategory" msprop:Generator_TablePropName="category" msprop:Generator_RowDeletingName="categoryRowDeleting" msprop:Generator_RowChangingName="categoryRowChanging" msprop:Generator_RowEvHandlerName="categoryRowChangeEventHandler" msprop:Generator_RowDeletedName="categoryRowDeleted" msprop:Generator_UserTableName="category" msprop:Generator_RowChangedName="categoryRowChanged" msprop:Generator_RowEvArgName="categoryRowChangeEvent" msprop:Generator_RowClassName="categoryRow">
+        <xs:element name="category" msprop:Generator_TableClassName="categoryDataTable" msprop:Generator_TableVarName="tablecategory" msprop:Generator_RowChangedName="categoryRowChanged" msprop:Generator_TablePropName="category" msprop:Generator_RowDeletingName="categoryRowDeleting" msprop:Generator_RowChangingName="categoryRowChanging" msprop:Generator_RowEvHandlerName="categoryRowChangeEventHandler" msprop:Generator_RowDeletedName="categoryRowDeleted" msprop:Generator_RowClassName="categoryRow" msprop:Generator_UserTableName="category" msprop:Generator_RowEvArgName="categoryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id">
@@ -511,7 +504,7 @@ FROM            bill INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="customer" msprop:Generator_TableClassName="customerDataTable" msprop:Generator_TableVarName="tablecustomer" msprop:Generator_TablePropName="customer" msprop:Generator_RowDeletingName="customerRowDeleting" msprop:Generator_RowChangingName="customerRowChanging" msprop:Generator_RowEvHandlerName="customerRowChangeEventHandler" msprop:Generator_RowDeletedName="customerRowDeleted" msprop:Generator_UserTableName="customer" msprop:Generator_RowChangedName="customerRowChanged" msprop:Generator_RowEvArgName="customerRowChangeEvent" msprop:Generator_RowClassName="customerRow">
+        <xs:element name="customer" msprop:Generator_TableClassName="customerDataTable" msprop:Generator_TableVarName="tablecustomer" msprop:Generator_RowChangedName="customerRowChanged" msprop:Generator_TablePropName="customer" msprop:Generator_RowDeletingName="customerRowDeleting" msprop:Generator_RowChangingName="customerRowChanging" msprop:Generator_RowEvHandlerName="customerRowChangeEventHandler" msprop:Generator_RowDeletedName="customerRowDeleted" msprop:Generator_RowClassName="customerRow" msprop:Generator_UserTableName="customer" msprop:Generator_RowEvArgName="customerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id">
@@ -546,7 +539,7 @@ FROM            bill INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="product" msprop:Generator_TableClassName="productDataTable" msprop:Generator_TableVarName="tableproduct" msprop:Generator_TablePropName="product" msprop:Generator_RowDeletingName="productRowDeleting" msprop:Generator_RowChangingName="productRowChanging" msprop:Generator_RowEvHandlerName="productRowChangeEventHandler" msprop:Generator_RowDeletedName="productRowDeleted" msprop:Generator_UserTableName="product" msprop:Generator_RowChangedName="productRowChanged" msprop:Generator_RowEvArgName="productRowChangeEvent" msprop:Generator_RowClassName="productRow">
+        <xs:element name="product" msprop:Generator_TableClassName="productDataTable" msprop:Generator_TableVarName="tableproduct" msprop:Generator_RowChangedName="productRowChanged" msprop:Generator_TablePropName="product" msprop:Generator_RowDeletingName="productRowDeleting" msprop:Generator_RowChangingName="productRowChanging" msprop:Generator_RowEvHandlerName="productRowChangeEventHandler" msprop:Generator_RowDeletedName="productRowDeleted" msprop:Generator_RowClassName="productRow" msprop:Generator_UserTableName="product" msprop:Generator_RowEvArgName="productRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id">
@@ -574,11 +567,9 @@ FROM            bill INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="date_create" msprop:Generator_ColumnVarNameInTable="columndate_create" msprop:Generator_ColumnPropNameInRow="date_create" msprop:Generator_ColumnPropNameInTable="date_createColumn" msprop:Generator_UserColumnName="date_create" type="xs:dateTime" />
-              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:int" />
               <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -586,49 +577,15 @@ FROM            bill INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="total_price" msprop:Generator_ColumnVarNameInTable="columntotal_price" msprop:Generator_ColumnPropNameInRow="total_price" msprop:Generator_ColumnPropNameInTable="total_priceColumn" msprop:Generator_UserColumnName="total_price" type="xs:double" />
-              <xs:element name="id_customer" msprop:Generator_ColumnVarNameInTable="columnid_customer" msprop:Generator_ColumnPropNameInRow="id_customer" msprop:Generator_ColumnPropNameInTable="id_customerColumn" msprop:Generator_UserColumnName="id_customer">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="id_bill" msprop:Generator_ColumnVarNameInTable="columnid_bill" msprop:Generator_ColumnPropNameInRow="id_bill" msprop:Generator_ColumnPropNameInTable="id_billColumn" msprop:Generator_UserColumnName="id_bill">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="id_product" msprop:Generator_ColumnVarNameInTable="columnid_product" msprop:Generator_ColumnPropNameInRow="id_product" msprop:Generator_ColumnPropNameInTable="id_productColumn" msprop:Generator_UserColumnName="id_product">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="category_name" msprop:Generator_ColumnVarNameInTable="columncategory_name" msprop:Generator_ColumnPropNameInRow="category_name" msprop:Generator_ColumnPropNameInTable="category_nameColumn" msprop:Generator_UserColumnName="category_name">
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="customer_name" msprop:Generator_ColumnVarNameInTable="columncustomer_name" msprop:Generator_ColumnPropNameInRow="customer_name" msprop:Generator_ColumnPropNameInTable="customer_nameColumn" msprop:Generator_UserColumnName="customer_name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:int" />
+              <xs:element name="date_create" msprop:Generator_ColumnVarNameInTable="columndate_create" msprop:Generator_ColumnPropNameInRow="date_create" msprop:Generator_ColumnPropNameInTable="date_createColumn" msprop:Generator_UserColumnName="date_create" type="xs:dateTime" />
               <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:double" />
             </xs:sequence>
           </xs:complexType>
@@ -660,19 +617,13 @@ FROM            bill INNER JOIN
       <xs:selector xpath=".//mstns:product" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:DataTable1" />
-      <xs:field xpath="mstns:id" />
-    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__bill__id_custome__1920BF5C" msdata:parent="customer" msdata:child="bill" msdata:parentkey="id" msdata:childkey="id_customer" msprop:Generator_UserChildTable="bill" msprop:Generator_ChildPropName="GetbillRows" msprop:Generator_UserRelationName="FK__bill__id_custome__1920BF5C" msprop:Generator_RelationVarName="relationFK__bill__id_custome__1920BF5C" msprop:Generator_UserParentTable="customer" msprop:Generator_ParentPropName="customerRow" />
-      <msdata:Relationship name="FK__bill_deta__id_bi__1BFD2C07" msdata:parent="bill" msdata:child="bill_detail" msdata:parentkey="id" msdata:childkey="id_bill" msprop:Generator_UserChildTable="bill_detail" msprop:Generator_ChildPropName="Getbill_detailRows" msprop:Generator_UserRelationName="FK__bill_deta__id_bi__1BFD2C07" msprop:Generator_ParentPropName="billRow" msprop:Generator_RelationVarName="relationFK__bill_deta__id_bi__1BFD2C07" msprop:Generator_UserParentTable="bill" />
-      <msdata:Relationship name="FK__bill_deta__id_pr__1CF15040" msdata:parent="product" msdata:child="bill_detail" msdata:parentkey="id" msdata:childkey="id_product" msprop:Generator_UserChildTable="bill_detail" msprop:Generator_ChildPropName="Getbill_detailRows" msprop:Generator_UserRelationName="FK__bill_deta__id_pr__1CF15040" msprop:Generator_RelationVarName="relationFK__bill_deta__id_pr__1CF15040" msprop:Generator_UserParentTable="product" msprop:Generator_ParentPropName="productRow" />
-      <msdata:Relationship name="FK__product__id_cate__164452B1" msdata:parent="category" msdata:child="product" msdata:parentkey="id" msdata:childkey="id_category" msprop:Generator_UserChildTable="product" msprop:Generator_ChildPropName="GetproductRows" msprop:Generator_UserRelationName="FK__product__id_cate__164452B1" msprop:Generator_ParentPropName="categoryRow" msprop:Generator_RelationVarName="relationFK__product__id_cate__164452B1" msprop:Generator_UserParentTable="category" />
-      <msdata:Relationship name="FK__bill_deta__id_bi__1BFD2C071" msdata:parent="bill" msdata:child="DataTable1" msdata:parentkey="id" msdata:childkey="id_bill" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="FK__bill_deta__id_bi__1BFD2C071" msprop:Generator_ParentPropName="billRow" msprop:Generator_RelationVarName="relationFK__bill_deta__id_bi__1BFD2C071" msprop:Generator_UserParentTable="bill" />
-      <msdata:Relationship name="FK__bill_deta__id_pr__1CF150401" msdata:parent="product" msdata:child="DataTable1" msdata:parentkey="id" msdata:childkey="id_product" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="FK__bill_deta__id_pr__1CF150401" msprop:Generator_ParentPropName="productRow" msprop:Generator_RelationVarName="relationFK__bill_deta__id_pr__1CF150401" msprop:Generator_UserParentTable="product" />
+      <msdata:Relationship name="FK__bill__id_custome__1920BF5C" msdata:parent="customer" msdata:child="bill" msdata:parentkey="id" msdata:childkey="id_customer" msprop:Generator_UserChildTable="bill" msprop:Generator_ChildPropName="GetbillRows" msprop:Generator_UserRelationName="FK__bill__id_custome__1920BF5C" msprop:Generator_ParentPropName="customerRow" msprop:Generator_RelationVarName="relationFK__bill__id_custome__1920BF5C" msprop:Generator_UserParentTable="customer" />
+      <msdata:Relationship name="FK__bill_deta__id_bi__1BFD2C07" msdata:parent="bill" msdata:child="bill_detail" msdata:parentkey="id" msdata:childkey="id_bill" msprop:Generator_UserChildTable="bill_detail" msprop:Generator_ChildPropName="Getbill_detailRows" msprop:Generator_UserRelationName="FK__bill_deta__id_bi__1BFD2C07" msprop:Generator_RelationVarName="relationFK__bill_deta__id_bi__1BFD2C07" msprop:Generator_UserParentTable="bill" msprop:Generator_ParentPropName="billRow" />
+      <msdata:Relationship name="FK__bill_deta__id_pr__1CF15040" msdata:parent="product" msdata:child="bill_detail" msdata:parentkey="id" msdata:childkey="id_product" msprop:Generator_UserChildTable="bill_detail" msprop:Generator_ChildPropName="Getbill_detailRows" msprop:Generator_UserRelationName="FK__bill_deta__id_pr__1CF15040" msprop:Generator_ParentPropName="productRow" msprop:Generator_RelationVarName="relationFK__bill_deta__id_pr__1CF15040" msprop:Generator_UserParentTable="product" />
+      <msdata:Relationship name="FK__product__id_cate__164452B1" msdata:parent="category" msdata:child="product" msdata:parentkey="id" msdata:childkey="id_category" msprop:Generator_UserChildTable="product" msprop:Generator_ChildPropName="GetproductRows" msprop:Generator_UserRelationName="FK__product__id_cate__164452B1" msprop:Generator_RelationVarName="relationFK__product__id_cate__164452B1" msprop:Generator_UserParentTable="category" msprop:Generator_ParentPropName="categoryRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
