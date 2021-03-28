@@ -38,6 +38,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,8 +59,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -91,7 +91,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
@@ -199,6 +199,24 @@
             this.txtName.Size = new System.Drawing.Size(194, 20);
             this.txtName.TabIndex = 33;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label5.Location = new System.Drawing.Point(15, 66);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 15);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Mã khách hàng";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(113, 65);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(194, 20);
+            this.txtID.TabIndex = 26;
+            // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(113, 170);
@@ -236,7 +254,7 @@
             this.label7.ForeColor = System.Drawing.Color.DarkCyan;
             this.label7.Location = new System.Drawing.Point(153, 42);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 16);
+            this.label7.Size = new System.Drawing.Size(73, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Thông tin";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -415,24 +433,6 @@
             this.dgv.Size = new System.Drawing.Size(483, 360);
             this.dgv.TabIndex = 1;
             this.dgv.DoubleClick += new System.EventHandler(this.dgv_DoubleClick);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label5.Location = new System.Drawing.Point(15, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 15);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Mã khách hàng";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(113, 65);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(194, 20);
-            this.txtID.TabIndex = 26;
             // 
             // Customer_GUI
             // 

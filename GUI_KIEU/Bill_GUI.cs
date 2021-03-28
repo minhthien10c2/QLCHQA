@@ -23,6 +23,7 @@ namespace GUI_KIEU
         Category_BUS category_bus = new Category_BUS();
         Bill_BUS bill_bus = new Bill_BUS();
         Bill_Detail_BUS bill_detail_bus = new Bill_Detail_BUS();
+        Customer_BUS customer_bus = new Customer_BUS();
         String id;
         double totalPrice = 0;
 
@@ -43,6 +44,10 @@ namespace GUI_KIEU
                 c.HeaderCell.Style.Font = new Font("Corobel", 10F);
                 c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
+
+            cbCustomer.DataSource = customer_bus.GetAllCustomer();
+            cbCustomer.DisplayMember = "name";
+            cbCustomer.ValueMember = "id";
 
             cbCategory.DataSource = category_bus.GetAllCategory();
             cbCategory.DisplayMember = "name";
@@ -151,7 +156,7 @@ namespace GUI_KIEU
             {
                 if (bill_bus.GetBillByID(txtID.Text).Rows.Count == 0)
                 {
-                    Bill_DTO bill_dto = new Bill_DTO(txtID.Text, DateTime.Now, double.Parse(txtTotalPrice.Text), "KH01");
+                    Bill_DTO bill_dto = new Bill_DTO(txtID.Text, DateTime.Now, double.Parse(txtTotalPrice.Text), cbCustomer.SelectedValue.ToString());
 
                     if (bill_bus.AddNewBill(bill_dto))
                     {
@@ -193,7 +198,7 @@ namespace GUI_KIEU
                 String idNew = txtID.Text;
                 if (idNew == id)
                 {
-                    Bill_DTO bill_dto = new Bill_DTO(txtID.Text, DateTime.Now, double.Parse(txtTotalPrice.Text), "KH01");
+                    Bill_DTO bill_dto = new Bill_DTO(txtID.Text, DateTime.Now, double.Parse(txtTotalPrice.Text), cbCustomer.SelectedValue.ToString());
 
                     if (bill_bus.UpdateBill(bill_dto) && bill_detail_bus.DeleteBill_Detail(id))
                     {
